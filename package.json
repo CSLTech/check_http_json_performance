@@ -1,6 +1,6 @@
 {
   "name": "check_http_json_performance",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check HTTP with JSON Performance data",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CSLTech/check_http_json_performance.git"
-  }
+  },
+  "bin": "bin/check_http_json_performance.js"
 }
