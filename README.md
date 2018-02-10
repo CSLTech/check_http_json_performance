@@ -1,6 +1,7 @@
 # check_http_json_performance
 Nagios HTTP Check with parsed JSON performance output
 
+```
 Usage: node index.js
 
   -u, --url=ARG            The URL to request.
@@ -11,3 +12,4 @@ Usage: node index.js
   -c, --critical=ARG       Critical threshold (default: 2000).
   -h, --help               Display this help.
   -V, --version            Show version.
+```
