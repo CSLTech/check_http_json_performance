@@ -65,7 +65,8 @@ requestPromise({
     uri: options.url,
     method: options.method || 'GET',
     timeout: parseInt(options.timeout || 10) * 1000,
-    resolveWithFullResponse: true
+    resolveWithFullResponse: true,
+    time: true
 })
 .then(response => {
     let body = null;
@@ -97,7 +98,7 @@ requestPromise({
     }
 
     const state = resultValue > critical ? 2 : resultValue > warning ? 1 : 0;
-    const performanceData = body ? " | " + objectToString(body) : "";
+    const performanceData = (body ? " | " + objectToString(body) : " ") + "responseTime=" + response.elapsedTime;
 
     console.log('HTTP', STATE_STRINGS[state], response.statusCode);
     console.log((response.body ? response.body : "") + performanceData);
