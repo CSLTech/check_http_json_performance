@@ -55,8 +55,9 @@ function objectToString(object, prefix) {
         }
         else {
             acc += subKey + '=' + value;
+            acc += ' ';
         }
-        acc += ' ';
+        
         return acc;
     }, '');
 }
